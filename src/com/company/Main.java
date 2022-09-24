@@ -1,5 +1,8 @@
 package com.company;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -37,9 +40,16 @@ public class Main {
         //end soru 43
         */
        // start soru44
+        /*
         int sayılarım44 [] ={140,29,8,91,78,98,10,2,130};
         Main.enBuyukIkiSayıyıYaz(sayılarım44);
+         */
        // end soru44
+
+        // start soru45
+        int sayılarım45 [] ={140,29,8,91,78,98,10,2,130};
+        Main.arrayValueKarıştır(sayılarım45);
+        // end soru45
 
     }
 
@@ -121,5 +131,17 @@ public class Main {
         System.out.println("Arraydeki en buyuk deger = " + enYuksekSayı1);
         System.out.println("Arraydeki 2. en buyuk deger = " + enYuksekSayı2);
 
+    }
+    public static void arrayValueKarıştır(int[]array){
+     // int sayılarım45 [] ={140,29,8,91,78,98,10,2,130};
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            int rastgele= random.nextInt(array.length); //0 ile 9 arasında deger uretiyor // 9 dahil degil
+
+            int rastgeleIndextekiSayı= array[rastgele];
+            array[rastgele]=array[i];
+            array[i]=rastgeleIndextekiSayı;
+        }
+        System.out.println(Arrays.toString(array));
     }
 }
