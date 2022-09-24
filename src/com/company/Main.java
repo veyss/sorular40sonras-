@@ -4,17 +4,26 @@ public class Main {
 
     public static void main(String[] args) {
         // start soru41
+        /*
         Main.asalSayıMı(7);
+        */
+
         // end soru41
         // start soru42
         //yontem1
+        /*
         Main.faktoryel(5);
+
+
         //yontem2
         int sonuc = Main.recFactoryel(5);
         System.out.println("sonuc " + sonuc);
+         */
+
         // start soru42
 
         // start soru 43
+        /*
         //https://tugrulbayrak.medium.com/search-arama-algoritmalari-binary-linear-5260431ba9a3
         int sayılarım [] ={2,8,9,78,98,100,122,130};
         int arananSayı = 99;
@@ -26,6 +35,12 @@ public class Main {
            System.out.println("Aranan "+ arananSayı + " sayı " + sonucIndex +".  indextedir");
        }
         //end soru 43
+        */
+       // start soru44
+        int sayılarım44 [] ={140,29,8,91,78,98,10,2,130};
+        Main.enBuyukIkiSayıyıYaz(sayılarım44);
+       // end soru44
+
     }
 
     public static void asalSayıMı(int sayı) {
@@ -89,5 +104,22 @@ public class Main {
         }
 
         return -1;
+    }
+    public static void enBuyukIkiSayıyıYaz(int [] array){
+     // int sayılarım44 [] ={29,8,91,78,98,10,2,130};
+     int enYuksekSayı1=0;
+     int enYuksekSayı2=0;
+        for (int value:array) {
+            if(value>enYuksekSayı1){
+                enYuksekSayı2=enYuksekSayı1;
+                enYuksekSayı1=value;
+            }
+            else if(value>enYuksekSayı2){
+                enYuksekSayı2=value;
+            }
+        }
+        System.out.println("Arraydeki en buyuk deger = " + enYuksekSayı1);
+        System.out.println("Arraydeki 2. en buyuk deger = " + enYuksekSayı2);
+
     }
 }
